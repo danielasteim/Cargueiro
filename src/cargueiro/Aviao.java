@@ -70,7 +70,7 @@ public class Aviao {
 
         // Verifica se a carga total é suficiente para decolar
         if (cargaTotal >= this.cargaMinimaDecolagem) {
-            System.out.print("DECOLAGEM AUTORIZADA! BOA VIAGEM");
+            System.out.println("DECOLAGEM AUTORIZADA! BOA VIAGEM");
             return true; // Decolagem autorizada
         } else {
             // Caso contrário, exibe uma mensagem informando que a carga mínima não foi atingida

@@ -1,7 +1,9 @@
 package cargueiro;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Compartimento {
     // Atributos do Compartimento
@@ -60,6 +62,11 @@ public class Compartimento {
     public void setTipoPermitidoBagagem(String[] tipoPermitidoBagagem) {
         this.tipoPermitidoBagagem = tipoPermitidoBagagem;
     }
+    
+    // Getter para as caixas
+	public List<Caixa> getCaixas() {
+		return caixas;
+	}
 
     // Método para verificar se o peso de uma caixa pode ser acomodado no compartimento
     // Retorna true se o peso total após adicionar a caixa for menor ou igual à carga máxima
@@ -92,4 +99,23 @@ public class Compartimento {
         }
         return false; // Não foi possível armazenar a caixa
     }
+    
+    public Map<String, Object> toJson() {
+        Map<String, Object> compartimentoJson = new LinkedHashMap<>();
+        compartimentoJson.put("nome", this.nome);
+        compartimentoJson.put("capacidade", this.cargaMaxima);
+        
+        List<Map<String, Object>> cargasJson = new ArrayList<>();
+        for (Caixa caixa : this.caixas) {
+            Map<String, Object> cargaJson = new LinkedHashMap<>();
+            cargaJson.put("tipo", caixa.getTipo());
+            cargaJson.put("numeroRastreio", caixa.getId());
+            cargaJson.put("peso", caixa.getPeso());
+            cargasJson.add(cargaJson);
+        }
+        compartimentoJson.put("cargas", cargasJson);
+        return compartimentoJson;
+    }
+
+
 }

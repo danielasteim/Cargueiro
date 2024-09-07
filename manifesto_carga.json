@@ -1,0 +1,65 @@
+{
+  "Principal": {
+    "nome": "Principal",
+    "capacidade": 833.0,
+    "cargas": [
+      {
+        "tipo": "simples",
+        "numeroRastreio": 4,
+        "peso": 100.0
+      },
+      {
+        "tipo": "simples",
+        "numeroRastreio": 5,
+        "peso": 400.0
+      },
+      {
+        "tipo": "simples",
+        "numeroRastreio": 8,
+        "peso": 200.0
+      },
+      {
+        "tipo": "simples",
+        "numeroRastreio": 9,
+        "peso": 100.0
+      },
+      {
+        "tipo": "simples",
+        "numeroRastreio": 11,
+        "peso": 22.0
+      }
+    ]
+  },
+  "Auxiliar": {
+    "nome": "Auxiliar",
+    "capacidade": 222.0,
+    "cargas": [
+      {
+        "tipo": "simples",
+        "numeroRastreio": 10,
+        "peso": 100.0
+      },
+      {
+        "tipo": "simples",
+        "numeroRastreio": 12,
+        "peso": 50.0
+      }
+    ]
+  },
+  "Precioso": {
+    "nome": "Precioso",
+    "capacidade": 21.0,
+    "cargas": [
+      {
+        "tipo": "precioso",
+        "numeroRastreio": 3,
+        "peso": 10.0
+      },
+      {
+        "tipo": "precioso",
+        "numeroRastreio": 6,
+        "peso": 5.0
+      }
+    ]
+  }
+}

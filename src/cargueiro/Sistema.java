@@ -50,8 +50,10 @@ public class Sistema {
                     break;
                 case 2:
                     // Autoriza a decolagem do avião (a lógica está na classe Aviao)
-                    aviaoCargueiro.autorizarDecolagem();
-                    break;
+                	if (aviaoCargueiro.autorizarDecolagem()) {
+                        ManipuladorArquivoJson manipulador = new ManipuladorArquivoJson();
+                        manipulador.gravarManifesto(aviaoCargueiro);
+                    }
                 case 3:
                     // Sai do sistema, fechando o scanner e finalizando o programa
                     System.out.println("Saindo do sistema...");
